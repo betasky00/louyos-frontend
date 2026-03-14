@@ -33,34 +33,36 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#faf8f3]">
       {/* Header */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-16 md:py-24 bg-[#faf8f3]">
         <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">{t("contact.title")}</h1>
-          <p className="text-xl text-gray-600">
+          <h1 className="text-5xl md:text-6xl font-playfair font-bold mb-6 text-gray-900">{t("contact.title")}</h1>
+          <p className="text-lg md:text-xl text-gray-700 font-light">
             {t("contact.description")}
           </p>
         </div>
       </section>
 
       {/* Contact Info & Form */}
-      <section className="py-20 bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
+              <h2 className="text-4xl font-playfair font-bold mb-12 text-gray-900">Get in Touch</h2>
 
-              <div className="space-y-8">
+              <div className="space-y-10">
                 {/* Phone */}
-                <div className="flex gap-4">
-                  <Phone size={32} className="text-green-600 flex-shrink-0 mt-1" />
+                <div className="flex gap-6">
+                  <div className="p-3 bg-green-50 rounded-lg h-fit">
+                    <Phone size={28} className="text-green-600" />
+                  </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-2">Phone</h3>
+                    <h3 className="font-bold text-lg mb-2 text-gray-900">Phone</h3>
                     <a
                       href="tel:+34626351439"
-                      className="text-gray-600 hover:text-green-600 transition-colors text-lg"
+                      className="text-gray-700 hover:text-green-600 transition-colors text-lg font-light"
                     >
                       {t("contact.phone")}
                     </a>
@@ -68,13 +70,15 @@ export default function Contact() {
                 </div>
 
                 {/* Email */}
-                <div className="flex gap-4">
-                  <Mail size={32} className="text-green-600 flex-shrink-0 mt-1" />
+                <div className="flex gap-6">
+                  <div className="p-3 bg-green-50 rounded-lg h-fit">
+                    <Mail size={28} className="text-green-600" />
+                  </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-2">Email</h3>
+                    <h3 className="font-bold text-lg mb-2 text-gray-900">Email</h3>
                     <a
                       href="mailto:louyos@gmail.com"
-                      className="text-gray-600 hover:text-green-600 transition-colors text-lg"
+                      className="text-gray-700 hover:text-green-600 transition-colors text-lg font-light"
                     >
                       {t("contact.email")}
                     </a>
@@ -83,19 +87,19 @@ export default function Contact() {
 
                 {/* Hours */}
                 <div>
-                  <h3 className="font-bold text-lg mb-4">Availability</h3>
-                  <p className="text-gray-600 mb-2">Monday - Friday: 9:00 AM - 6:00 PM (CET)</p>
-                  <p className="text-gray-600">Saturday: 10:00 AM - 2:00 PM (CET)</p>
+                  <h3 className="font-bold text-lg mb-4 text-gray-900">Availability</h3>
+                  <p className="text-gray-700 mb-2 font-light">Monday - Friday: 9:00 AM - 6:00 PM (CET)</p>
+                  <p className="text-gray-700 font-light">Saturday: 10:00 AM - 2:00 PM (CET)</p>
                 </div>
               </div>
             </div>
 
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold mb-8">{t("contact.formTitle")}</h2>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <h2 className="text-4xl font-playfair font-bold mb-12 text-gray-900">{t("contact.formTitle")}</h2>
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-semibold mb-2">
+                  <label className="block text-sm font-semibold mb-2 text-gray-900">
                     {t("forms.name")}
                   </label>
                   <input
@@ -104,13 +108,13 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">
+                  <label className="block text-sm font-semibold mb-2 text-gray-900">
                     {t("forms.email")}
                   </label>
                   <input
@@ -119,13 +123,13 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">
+                  <label className="block text-sm font-semibold mb-2 text-gray-900">
                     {t("forms.subject")}
                   </label>
                   <input
@@ -134,13 +138,13 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, subject: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">
+                  <label className="block text-sm font-semibold mb-2 text-gray-900">
                     {t("forms.message")}
                   </label>
                   <textarea
@@ -148,14 +152,14 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 min-h-40"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all min-h-40"
                     required
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-all duration-300 shadow-sm hover:shadow-md"
                 >
                   {t("forms.submit")}
                 </button>

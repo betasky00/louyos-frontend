@@ -66,27 +66,30 @@ export default function Academy() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#faf8f3]">
       {/* Header */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-16 md:py-24 bg-[#faf8f3]">
         <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">{t("academy.title")}</h1>
-          <p className="text-xl text-gray-600 mb-4">
+          <h1 className="text-5xl md:text-6xl font-playfair font-bold mb-6 text-gray-900">{t("academy.title")}</h1>
+          <p className="text-lg md:text-xl text-gray-700 mb-4 font-light">
             {t("academy.description")}
           </p>
-          <p className="text-base text-gray-600">
+          <p className="text-base text-gray-600 font-light">
             {t("academy.formats")}
           </p>
         </div>
       </section>
 
       {/* Categories */}
-      <section className="py-20 bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">Tutoring Categories</h2>
+          <h2 className="text-4xl font-playfair font-bold mb-12 text-gray-900">Tutoring Categories</h2>
           <div className="space-y-4">
             {categories.map((category) => (
-              <div key={category.id} className="border border-gray-200 rounded-lg p-6">
+              <div 
+                key={category.id} 
+                className="border border-gray-100 rounded-xl p-6 hover:shadow-md transition-all duration-300 bg-white"
+              >
                 <button
                   onClick={() =>
                     setExpandedCategory(
@@ -95,22 +98,22 @@ export default function Academy() {
                   }
                   className="w-full flex items-center justify-between hover:text-green-600 transition-colors"
                 >
-                  <h3 className="text-xl font-bold">{category.title}</h3>
+                  <h3 className="text-2xl font-playfair font-bold text-gray-900">{category.title}</h3>
                   <ChevronDown
                     size={24}
-                    className={`transition-transform ${
+                    className={`transition-transform text-gray-600 ${
                       expandedCategory === category.id ? "rotate-180" : ""
                     }`}
                   />
                 </button>
 
                 {expandedCategory === category.id && (
-                  <div className="mt-4 pt-4 border-t border-gray-200">
-                    <ul className="space-y-2">
+                  <div className="mt-6 pt-6 border-t border-gray-100">
+                    <ul className="space-y-3">
                       {Array.isArray(category.subjects) ? (category.subjects as string[]).map((subject: string, idx: number) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <span className="text-green-600 font-bold mt-1">•</span>
-                          <span>{subject}</span>
+                          <span className="text-green-600 font-bold mt-1 text-lg">•</span>
+                          <span className="text-gray-700 font-light">{subject}</span>
                         </li>
                       )) : null}
                     </ul>
@@ -123,27 +126,27 @@ export default function Academy() {
       </section>
 
       {/* Session Request Form */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 md:py-28 bg-[#faf8f3]">
         <div className="max-w-2xl mx-auto px-4">
           {!showForm ? (
             <div className="text-center">
-              <h2 className="text-3xl font-bold mb-4">Ready to Start?</h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <h2 className="text-4xl font-playfair font-bold mb-6 text-gray-900">Ready to Start?</h2>
+              <p className="text-lg text-gray-700 mb-10 font-light">
                 {t("academy.requestCTA")}
               </p>
               <button
                 onClick={() => setShowForm(true)}
-                className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="bg-green-600 hover:bg-green-700 text-white px-10 py-3 rounded-lg font-semibold transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 {t("academy.requestCTA")}
               </button>
             </div>
           ) : (
-            <div className="bg-white p-8 rounded-lg border border-gray-200">
-              <h2 className="text-2xl font-bold mb-6">{t("forms.sessionRequest")}</h2>
-              <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="bg-white p-10 rounded-xl border border-gray-100 shadow-sm">
+              <h2 className="text-3xl font-playfair font-bold mb-8 text-gray-900">{t("forms.sessionRequest")}</h2>
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-semibold mb-2">
+                  <label className="block text-sm font-semibold mb-2 text-gray-900">
                     {t("forms.name")}
                   </label>
                   <input
@@ -152,13 +155,13 @@ export default function Academy() {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">
+                  <label className="block text-sm font-semibold mb-2 text-gray-900">
                     {t("forms.email")}
                   </label>
                   <input
@@ -167,13 +170,13 @@ export default function Academy() {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">
+                  <label className="block text-sm font-semibold mb-2 text-gray-900">
                     {t("forms.subject")}
                   </label>
                   <input
@@ -182,7 +185,7 @@ export default function Academy() {
                     onChange={(e) =>
                       setFormData({ ...formData, subject: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all"
                     placeholder="e.g., Python, Calculus, Finance"
                     required
                   />
@@ -190,7 +193,7 @@ export default function Academy() {
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-semibold mb-2">
+                    <label className="block text-sm font-semibold mb-2 text-gray-900">
                       {t("forms.date")}
                     </label>
                     <input
@@ -199,12 +202,12 @@ export default function Academy() {
                       onChange={(e) =>
                         setFormData({ ...formData, date: e.target.value })
                       }
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold mb-2">
+                    <label className="block text-sm font-semibold mb-2 text-gray-900">
                       {t("forms.time")}
                     </label>
                     <input
@@ -213,13 +216,13 @@ export default function Academy() {
                       onChange={(e) =>
                         setFormData({ ...formData, time: e.target.value })
                       }
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">
+                  <label className="block text-sm font-semibold mb-2 text-gray-900">
                     {t("forms.message")}
                   </label>
                   <textarea
@@ -227,19 +230,22 @@ export default function Academy() {
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 min-h-32"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all min-h-32"
                     placeholder="Tell us more about your learning goals..."
                   />
                 </div>
 
                 <div className="flex gap-4 pt-4">
-                  <button type="submit" className="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-semibold transition-colors">
+                  <button 
+                    type="submit" 
+                    className="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-all duration-300 shadow-sm hover:shadow-md"
+                  >
                     {t("forms.submit")}
                   </button>
                   <button
                     type="button"
                     onClick={() => setShowForm(false)}
-                    className="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-900 py-2 rounded-lg font-semibold transition-colors"
+                    className="flex-1 border-2 border-gray-400 text-gray-700 hover:border-gray-600 hover:text-gray-900 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
                     {t("forms.cancel")}
                   </button>

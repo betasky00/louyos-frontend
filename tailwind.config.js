@@ -10,6 +10,10 @@ export default {
         primary: '#22c55e',
         secondary: '#6b7280',
       },
+      fontFamily: {
+        playfair: ['Playfair Display', 'serif'],
+        inter: ['Inter', 'sans-serif'],
+      },
     },
   },
   plugins: [],
