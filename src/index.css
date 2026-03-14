@@ -2,6 +2,11 @@
 
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #22c55e;
+  --color-secondary: #6b7280;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,17 +21,4 @@ body {
 
 html {
   scroll-behavior: smooth;
-}
-
-@theme {
-  --color-primary: #22c55e;
-  --color-secondary: #6b7280;
-  --color-accent: #22c55e;
-  --color-background: #ffffff;
-  --color-foreground: #000000;
-  --color-muted: #f3f4f6;
-  --color-muted-foreground: #6b7280;
-  --color-border: #e5e7eb;
-  --color-card: #ffffff;
-  --color-card-foreground: #000000;
 }
