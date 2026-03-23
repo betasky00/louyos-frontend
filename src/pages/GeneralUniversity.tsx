@@ -62,7 +62,7 @@ export default function GeneralUniversity() {
     try {
       const emailContent = `New Academy Session Booking from General University\n\nStudent Information:\n- Name: ${data.name}\n- Email: ${data.email}\n- Class: ${data.subject}\n- Preferred Date: ${data.date}\n- Preferred Time: ${data.time}\n- Message: ${data.message}\n\nTimestamp: ${new Date().toISOString()}`;
 
-      const response = await fetch('https://api.manus.im/forge/email/send', {
+      const response = await fetch('https://api.manus.im/v1/email/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
