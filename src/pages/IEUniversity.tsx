@@ -21,7 +21,33 @@ export default function IEUniversity() {
   const bbaClasses = t("ieUniversity.bbaClasses") as string[];
   const masterClasses = t("ieUniversity.masterClasses") as string[];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const sendEmail = async (data: typeof formData) => {
+    try {
+      const emailContent = `New Academy Session Booking from IE University\n\nStudent Information:\n- Name: ${data.name}\n- Email: ${data.email}\n- Class: ${data.subject}\n- Preferred Date: ${data.date}\n- Preferred Time: ${data.time}\n- Message: ${data.message}\n\nTimestamp: ${new Date().toISOString()}`;
+
+      const response = await fetch('https://api.manus.im/v1/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_FRONTEND_FORGE_API_KEY}`,
+        },
+        body: JSON.stringify({
+          to: 'academy@louyos.com',
+          subject: `New Session Booking: ${data.subject}`,
+          text: emailContent,
+          html: `<pre style="font-family: Arial, sans-serif; white-space: pre-wrap;">${emailContent}</pre>`,
+        }),
+      });
+
+      if (!response.ok) {
+        console.error('Email send failed:', response.status);
+      }
+    } catch (error) {
+      console.error('Email send error:', error);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.subject) {
       toast.error(t("forms.error"));
@@ -35,6 +61,9 @@ export default function IEUniversity() {
       timestamp: new Date().toISOString(),
     });
     localStorage.setItem("submissions", JSON.stringify(submissions));
+
+    // Send email
+    await sendEmail(formData);
 
     toast.success(t("forms.success"));
     setFormData({ name: "", email: "", subject: "", date: "", time: "", message: "" });

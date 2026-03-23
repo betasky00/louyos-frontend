@@ -232,7 +232,8 @@ export const translations = {
       title: "Contact",
       description: "Get in touch with us for any inquiries.",
       phone: "+34 626 351 439",
-      email: "louyos_academy@louyos.com",
+      email: "academy@louyos.com",
+      consultingEmail: "consulting@louyos.com",
       formTitle: "Send us a message",
     },
     // Footer
@@ -489,7 +490,8 @@ export const translations = {
       title: "Contacto",
       description: "Ponte en contacto con nosotros para cualquier consulta.",
       phone: "+34 626 351 439",
-      email: "louyos_academy@louyos.com",
+      email: "academy@louyos.com",
+      consultingEmail: "consulting@louyos.com",
       formTitle: "Envíanos un mensaje",
     },
     // Footer
@@ -746,7 +748,8 @@ export const translations = {
       title: "Contact",
       description: "Contactez-nous pour toute question.",
       phone: "+34 626 351 439",
-      email: "louyos_academy@louyos.com",
+      email: "academy@louyos.com",
+      consultingEmail: "consulting@louyos.com",
       formTitle: "Envoyez-nous un message",
     },
     // Footer

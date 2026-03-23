@@ -85,14 +85,14 @@ For any data protection inquiries or concerns, please contact our data protectio
                   {t("contact.phone")}
                 </a>
               </p>
-              <p className="text-gray-400">
-                <a href="mailto:louyos_academy@louyos.com" className="hover:text-green-400 transition-colors font-light">
-                  louyos_academy@louyos.com
+              <p className="text-gray-400 mb-2">
+                <a href="mailto:academy@louyos.com" className="hover:text-green-400 transition-colors font-light">
+                  academy@louyos.com
                 </a>
               </p>
               <p className="text-gray-400">
-                <a href="mailto:louyos-consulting@louyos.com" className="hover:text-green-400 transition-colors font-light">
-                  louyos-consulting@louyos.com
+                <a href="mailto:consulting@louyos.com" className="hover:text-green-400 transition-colors font-light">
+                  consulting@louyos.com
                 </a>
               </p>
             </div>
