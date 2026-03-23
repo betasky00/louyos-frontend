@@ -1,8 +1,9 @@
 import { useLanguage } from "../contexts/LanguageContext";
 import { useState } from "react";
-import { ChevronDown, ArrowLeft } from "lucide-react";
+import { ArrowLeft, ChevronDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import { sendBookingEmail } from "../lib/emailService";
 
 export default function Primaire() {
   const { t } = useLanguage();
@@ -42,32 +43,7 @@ export default function Primaire() {
   ];
 
   const sendEmail = async (data: typeof formData) => {
-    try {
-      const emailContent = `New Academy Session Booking from Primaire\n\nStudent Information:\n- Name: ${data.name}\n- Email: ${data.email}\n- Class: ${data.subject}\n- Preferred Date: ${data.date}\n- Preferred Time: ${data.time}\n- Message: ${data.message}\n\nTimestamp: ${new Date().toISOString()}`;
-
-      const response = await fetch('https://api.manus.im/v1/email/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.VITE_FRONTEND_FORGE_API_KEY}`,
-        },
-        body: JSON.stringify({
-          to: 'academy@louyos.com',
-          subject: `New Session Booking: ${data.subject}`,
-          text: emailContent,
-          html: `<pre style="font-family: Arial, sans-serif; white-space: pre-wrap;">${emailContent}</pre>`,
-        }),
-      });
-
-      if (!response.ok) {
-        const error = await response.text();
-        console.error('Email send failed:', response.status, error);
-      } else {
-        console.log('Email sent successfully');
-      }
-    } catch (error) {
-      console.error('Email send error:', error);
-    }
+    await sendBookingEmail('academy', data);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {

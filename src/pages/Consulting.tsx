@@ -2,6 +2,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import { useState } from "react";
 import { Check } from "lucide-react";
 import { toast } from "sonner";
+import { sendBookingEmail } from "../lib/emailService";
 
 export default function Consulting() {
   const { t } = useLanguage();
@@ -16,32 +17,7 @@ export default function Consulting() {
   const services = t("consulting.services");
 
   const sendEmail = async (data: typeof formData) => {
-    try {
-      const emailContent = `New Consulting Service Request\n\nClient Information:\n- Name: ${data.name}\n- Email: ${data.email}\n- Service: ${data.subject}\n- Message: ${data.message}\n\nTimestamp: ${new Date().toISOString()}`;
-
-      const response = await fetch('https://api.manus.im/v1/email/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.VITE_FRONTEND_FORGE_API_KEY}`,
-        },
-        body: JSON.stringify({
-          to: 'consulting@louyos.com',
-          subject: `New Consulting Request: ${data.subject}`,
-          text: emailContent,
-          html: `<pre style="font-family: Arial, sans-serif; white-space: pre-wrap;">${emailContent}</pre>`,
-        }),
-      });
-
-      if (!response.ok) {
-        const error = await response.text();
-        console.error('Email send failed:', response.status, error);
-      } else {
-        console.log('Email sent successfully');
-      }
-    } catch (error) {
-      console.error('Email send error:', error);
-    }
+    await sendBookingEmail('consulting', data);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
