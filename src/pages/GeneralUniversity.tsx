@@ -62,7 +62,7 @@ export default function GeneralUniversity() {
     try {
       const emailContent = `New Academy Session Booking from General University\n\nStudent Information:\n- Name: ${data.name}\n- Email: ${data.email}\n- Class: ${data.subject}\n- Preferred Date: ${data.date}\n- Preferred Time: ${data.time}\n- Message: ${data.message}\n\nTimestamp: ${new Date().toISOString()}`;
 
-      await fetch('https://api.manus.im/v1/email/send', {
+      const response = await fetch(`${import.meta.env.VITE_FRONTEND_FORGE_API_URL}/email/send`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -75,6 +75,13 @@ export default function GeneralUniversity() {
           html: `<pre style="font-family: Arial, sans-serif; white-space: pre-wrap;">${emailContent}</pre>`,
         }),
       });
+
+      if (!response.ok) {
+        const error = await response.text();
+        console.error('Email send failed:', response.status, error);
+      } else {
+        console.log('Email sent successfully');
+      }
     } catch (error) {
       console.error('Email send error:', error);
     }

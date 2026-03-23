@@ -19,7 +19,7 @@ export default function Consulting() {
     try {
       const emailContent = `New Consulting Service Request\n\nClient Information:\n- Name: ${data.name}\n- Email: ${data.email}\n- Service: ${data.subject}\n- Message: ${data.message}\n\nTimestamp: ${new Date().toISOString()}`;
 
-      await fetch('https://api.manus.im/v1/email/send', {
+      const response = await fetch(`${import.meta.env.VITE_FRONTEND_FORGE_API_URL}/email/send`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -32,6 +32,13 @@ export default function Consulting() {
           html: `<pre style="font-family: Arial, sans-serif; white-space: pre-wrap;">${emailContent}</pre>`,
         }),
       });
+
+      if (!response.ok) {
+        const error = await response.text();
+        console.error('Email send failed:', response.status, error);
+      } else {
+        console.log('Email sent successfully');
+      }
     } catch (error) {
       console.error('Email send error:', error);
     }
