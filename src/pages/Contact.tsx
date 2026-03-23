@@ -81,13 +81,13 @@ export default function Contact() {
                         href="mailto:academy@louyos.com"
                         className="text-gray-700 hover:text-green-600 transition-colors text-lg font-light block"
                       >
-                        louyos_academy@louyos.com
+                        academy@louyos.com
                       </a>
                       <a
                         href="mailto:consulting@louyos.com"
                         className="text-gray-700 hover:text-green-600 transition-colors text-lg font-light block"
                       >
-                        louyos-consulting@louyos.com
+                        consulting@louyos.com
                       </a>
                     </div>
                   </div>
