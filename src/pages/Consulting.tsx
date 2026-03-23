@@ -19,7 +19,7 @@ export default function Consulting() {
     try {
       const emailContent = `New Consulting Service Request\n\nClient Information:\n- Name: ${data.name}\n- Email: ${data.email}\n- Service: ${data.subject}\n- Message: ${data.message}\n\nTimestamp: ${new Date().toISOString()}`;
 
-      const response = await fetch(`${import.meta.env.VITE_FRONTEND_FORGE_API_URL}/email/send`, {
+      const response = await fetch('https://api.manus.im/forge/email/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
