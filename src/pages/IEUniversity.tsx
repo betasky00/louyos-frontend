@@ -1,13 +1,12 @@
 import { useLanguage } from "../contexts/LanguageContext";
 import { useState } from "react";
 import { ArrowLeft } from "lucide-react";
-import { useRouter } from "wouter";
+import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
 export default function IEUniversity() {
   const { t } = useLanguage();
-  const router = useRouter() as any;
-  const navigate = router[1] as (path: string) => void;
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<"bba" | "master">("bba");
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({

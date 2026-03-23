@@ -1,11 +1,10 @@
 import { useLanguage } from "../contexts/LanguageContext";
-import { useRouter } from "wouter";
+import { useNavigate } from "react-router-dom";
 import { BookOpen } from "lucide-react";
 
 export default function Academy() {
   const { t } = useLanguage();
-  const router = useRouter() as any;
-  const navigate = router[1] as (path: string) => void;
+  const navigate = useNavigate();
 
   const levels = [
     {
@@ -20,21 +19,21 @@ export default function Academy() {
       label: t("academy.university"),
       description: t("academy.universityDescription"),
       path: "/academy/university",
-      color: "from-blue-400 to-blue-600",
+      color: "from-green-400 to-green-600",
     },
     {
       id: "lycee",
       label: t("academy.lycee"),
       description: t("academy.lyceeDescription"),
       path: "/academy/lycee",
-      color: "from-purple-400 to-purple-600",
+      color: "from-green-400 to-green-600",
     },
     {
       id: "primaire",
       label: t("academy.primaire"),
       description: t("academy.primaireDescription"),
       path: "/academy/primaire",
-      color: "from-orange-400 to-orange-600",
+      color: "from-green-400 to-green-600",
     },
   ];
 

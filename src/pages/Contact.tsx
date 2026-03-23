@@ -76,12 +76,20 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-2 text-gray-900">Email</h3>
-                    <a
-                      href="mailto:louyos@gmail.com"
-                      className="text-gray-700 hover:text-green-600 transition-colors text-lg font-light"
-                    >
-                      {t("contact.email")}
-                    </a>
+                    <div className="space-y-2">
+                      <a
+                        href="mailto:louyos_academy@louyos.com"
+                        className="text-gray-700 hover:text-green-600 transition-colors text-lg font-light block"
+                      >
+                        louyos_academy@louyos.com
+                      </a>
+                      <a
+                        href="mailto:louyos-consulting@louyos.com"
+                        className="text-gray-700 hover:text-green-600 transition-colors text-lg font-light block"
+                      >
+                        louyos-consulting@louyos.com
+                      </a>
+                    </div>
                   </div>
                 </div>
 

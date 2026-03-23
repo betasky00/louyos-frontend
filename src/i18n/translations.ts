@@ -232,8 +232,22 @@ export const translations = {
       title: "Contact",
       description: "Get in touch with us for any inquiries.",
       phone: "+34 626 351 439",
-      email: "louyos@gmail.com",
+      email: "louyos_academy@louyos.com",
       formTitle: "Send us a message",
+    },
+    // Footer
+    footer: {
+      about: "Premium tutoring and consulting services for top universities and companies.",
+      contactTitle: "Contact",
+      quickLinksTitle: "Quick Links",
+      legalTitle: "Legal",
+      address: "Calle de Recoletos 14",
+      city: "Madrid",
+      country: "España",
+      legalNotice: "Legal Notice",
+      cookiePolicy: "Cookie Policy",
+      dataProtection: "Data Protection",
+      copyright: "© 2026 Louyos. All rights reserved.",
     },
     // Forms
     forms: {
@@ -475,9 +489,24 @@ export const translations = {
       title: "Contacto",
       description: "Ponte en contacto con nosotros para cualquier consulta.",
       phone: "+34 626 351 439",
-      email: "louyos@gmail.com",
+      email: "louyos_academy@louyos.com",
       formTitle: "Envíanos un mensaje",
     },
+    // Footer
+    footer: {
+      about: "Servicios premium de tutoría y consultoría para universidades y empresas líderes.",
+      contactTitle: "Contacto",
+      quickLinksTitle: "Enlaces Rápidos",
+      legalTitle: "Legal",
+      address: "Calle de Recoletos 14",
+      city: "Madrid",
+      country: "España",
+      legalNotice: "Aviso Legal",
+      cookiePolicy: "Política de Cookies",
+      dataProtection: "Protección de Datos",
+      copyright: "© 2026 Louyos. Todos los derechos reservados.",
+    },
+    // Forms
     forms: {
       name: "Nombre",
       email: "Correo Electrónico",
@@ -717,8 +746,22 @@ export const translations = {
       title: "Contact",
       description: "Contactez-nous pour toute question.",
       phone: "+34 626 351 439",
-      email: "louyos@gmail.com",
+      email: "louyos_academy@louyos.com",
       formTitle: "Envoyez-nous un message",
+    },
+    // Footer
+    footer: {
+      about: "Services premium de tutorat et de conseil pour les universités et entreprises de premier plan.",
+      contactTitle: "Contact",
+      quickLinksTitle: "Liens Rapides",
+      legalTitle: "Légal",
+      address: "Calle de Recoletos 14",
+      city: "Madrid",
+      country: "España",
+      legalNotice: "Mentions Légales",
+      cookiePolicy: "Politique de Cookies",
+      dataProtection: "Protection des Données",
+      copyright: "© 2026 Louyos. Tous droits réservés.",
     },
     forms: {
       name: "Nom",

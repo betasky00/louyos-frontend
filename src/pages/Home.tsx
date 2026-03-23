@@ -10,7 +10,7 @@ export default function Home() {
       <section className="pt-24 pb-20 md:pt-32 md:pb-28 bg-[#faf8f3]">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 text-gray-900 leading-tight">
-            {t("home.heroTitle")}
+            {t("home.heroTitle").replace(" & ", " & ")}
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-12 font-light max-w-3xl mx-auto">
             {t("home.heroSubheadline")}
