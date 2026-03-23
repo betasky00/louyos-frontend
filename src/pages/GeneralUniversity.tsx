@@ -18,6 +18,18 @@ export default function GeneralUniversity() {
     message: "",
   });
 
+  const renderTitleWithAmpersand = (title: string) => {
+    if (title.includes(" & ")) {
+      const parts = title.split(" & ");
+      return (
+        <>
+          {parts[0]} <span className="ampersand">&</span> {parts[1]}
+        </>
+      );
+    }
+    return title;
+  };
+
   const categories = [
     {
       id: "quantitative",
@@ -108,7 +120,7 @@ export default function GeneralUniversity() {
                   }
                   className="w-full flex items-center justify-between hover:text-green-600 transition-colors"
                 >
-                  <h3 className="text-2xl font-playfair font-bold text-gray-900">{category.title}</h3>
+                  <h3 className="text-2xl font-playfair font-bold text-gray-900">{renderTitleWithAmpersand(category.title)}</h3>
                   <ChevronDown
                     size={24}
                     className={`transition-transform text-gray-600 ${
