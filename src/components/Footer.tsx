@@ -62,7 +62,7 @@ For any data protection inquiries or concerns, please contact our data protectio
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             {/* About */}
             <div>
-              <h3 className="text-2xl font-playfair font-bold mb-4">Louyos</h3>
+              <h3 className="text-2xl font-playfair font-bold mb-4 text-white">Louyos</h3>
               <p className="text-gray-400 font-light leading-relaxed">
                 {t("footer.about")}
               </p>
@@ -70,7 +70,7 @@ For any data protection inquiries or concerns, please contact our data protectio
 
             {/* Address */}
             <div>
-              <h3 className="font-bold mb-4 text-lg">{t("footer.contactTitle")}</h3>
+              <h3 className="font-bold mb-4 text-lg text-white">{t("footer.contactTitle")}</h3>
               <p className="text-gray-400 mb-3 font-light">
                 {t("footer.address")}
               </p>
@@ -99,7 +99,7 @@ For any data protection inquiries or concerns, please contact our data protectio
 
             {/* Quick Links */}
             <div>
-              <h3 className="font-bold mb-4 text-lg">{t("footer.quickLinksTitle")}</h3>
+              <h3 className="font-bold mb-4 text-lg text-white">{t("footer.quickLinksTitle")}</h3>
               <ul className="space-y-2 text-gray-400">
                 <li>
                   <a href="/" className="hover:text-green-400 transition-colors font-light">
@@ -126,7 +126,7 @@ For any data protection inquiries or concerns, please contact our data protectio
 
             {/* Legal */}
             <div>
-              <h3 className="font-bold mb-4 text-lg">{t("footer.legalTitle")}</h3>
+              <h3 className="font-bold mb-4 text-lg text-white">{t("footer.legalTitle")}</h3>
               <ul className="space-y-2 text-gray-400">
                 <li>
                   <button 

@@ -114,7 +114,7 @@ export default function Primaire() {
                     <ul className="space-y-3">
                       {Array.isArray(category.subjects) ? (category.subjects as string[]).map((subject: string, idx: number) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <span className="text-green-600 font-bold mt-1 text-lg">•</span>
+                          <span className="text-green-600 font-bold mt-1 text-lg">★</span>
                           <span className="text-gray-700 font-light">{subject}</span>
                         </li>
                       )) : null}
