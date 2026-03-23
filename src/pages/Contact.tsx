@@ -78,13 +78,13 @@ export default function Contact() {
                     <h3 className="font-bold text-lg mb-2 text-gray-900">Email</h3>
                     <div className="space-y-2">
                       <a
-                        href="mailto:louyos_academy@louyos.com"
+                        href="mailto:academy@louyos.com"
                         className="text-gray-700 hover:text-green-600 transition-colors text-lg font-light block"
                       >
                         louyos_academy@louyos.com
                       </a>
                       <a
-                        href="mailto:louyos-consulting@louyos.com"
+                        href="mailto:consulting@louyos.com"
                         className="text-gray-700 hover:text-green-600 transition-colors text-lg font-light block"
                       >
                         louyos-consulting@louyos.com
