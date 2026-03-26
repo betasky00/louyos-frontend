@@ -14,10 +14,15 @@ export default function Consulting() {
     message: "",
   });
 
-  const services = t("consulting.services");
+  const financialServices = t("consulting.financialServices");
+  const quantitativeServices = t("consulting.quantitativeServices");
 
   const sendEmail = async (data: typeof formData) => {
-    await sendBookingEmail('consulting', data);
+    await sendBookingEmail('consulting', {
+      ...data,
+      educationLevel: 'Consulting',
+      course: data.subject,
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -32,6 +37,7 @@ export default function Consulting() {
     submissions.push({
       type: "consulting",
       ...formData,
+      educationLevel: 'Consulting',
       timestamp: new Date().toISOString(),
     });
     localStorage.setItem("submissions", JSON.stringify(submissions));
@@ -49,27 +55,52 @@ export default function Consulting() {
       <section className="py-16 md:py-24 bg-[#faf8f3]">
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-playfair font-bold mb-6 text-gray-900">{t("consulting.title")}</h1>
-          <p className="text-lg md:text-xl text-gray-700 font-light">
+          <p className="text-lg md:text-xl text-gray-700 font-light mb-6">
             {t("consulting.description")}
+          </p>
+          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed max-w-4xl">
+            {t("consulting.fullDescription")}
           </p>
         </div>
       </section>
 
       {/* Services */}
       <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-playfair font-bold mb-12 text-gray-900">{t("consulting.servicesTitle")}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {Array.isArray(services) ? (services as string[]).map((service: string, index: number) => (
-              <div key={index} className="flex gap-4 p-6 border border-gray-100 rounded-xl hover:shadow-md transition-all duration-300 bg-white">
-                <div className="flex-shrink-0 mt-1">
-                  <div className="flex items-center justify-center h-6 w-6 rounded-full bg-green-100">
-                    <Check size={16} className="text-green-600" />
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl font-playfair font-bold mb-16 text-gray-900">{t("consulting.servicesTitle")}</h2>
+          
+          {/* Financial Services */}
+          <div className="mb-16">
+            <h3 className="text-3xl font-playfair font-bold mb-8 text-gray-900">{t("consulting.financialServicesTitle")}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {Array.isArray(financialServices) ? (financialServices as string[]).map((service: string, index: number) => (
+                <div key={index} className="flex gap-4 p-6 border border-gray-100 rounded-xl hover:shadow-md transition-all duration-300 bg-white">
+                  <div className="flex-shrink-0 mt-1">
+                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-green-100">
+                      <Check size={16} className="text-green-600" />
+                    </div>
                   </div>
+                  <p className="text-lg text-gray-700 font-light leading-relaxed">{service}</p>
                 </div>
-                <p className="text-lg text-gray-700 font-light leading-relaxed">{service}</p>
-              </div>
-            )) : null}
+              )) : null}
+            </div>
+          </div>
+          
+          {/* Quantitative Services */}
+          <div>
+            <h3 className="text-3xl font-playfair font-bold mb-8 text-gray-900">{t("consulting.quantitativeServicesTitle")}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {Array.isArray(quantitativeServices) ? (quantitativeServices as string[]).map((service: string, index: number) => (
+                <div key={index} className="flex gap-4 p-6 border border-gray-100 rounded-xl hover:shadow-md transition-all duration-300 bg-white">
+                  <div className="flex-shrink-0 mt-1">
+                    <div className="flex items-center justify-center h-6 w-6 rounded-full bg-green-100">
+                      <Check size={16} className="text-green-600" />
+                    </div>
+                  </div>
+                  <p className="text-lg text-gray-700 font-light leading-relaxed">{service}</p>
+                </div>
+              )) : null}
+            </div>
           </div>
         </div>
       </section>
