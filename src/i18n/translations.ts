@@ -191,7 +191,10 @@ export const translations = {
     consulting: {
       title: "Consulting",
       description: "Strategic finance and business consulting for SMEs.",
+      servicesTitle: "Our Services",
       readyToConsult: "Ready to consult?",
+      consultCTA: "Let's discuss your business needs and how we can help.",
+      requestConsultation: "Request Consultation",
       consultText: "Let's discuss your business needs and how we can help.",
       quantitativeConsulting: "Quantitative Consulting",
       financialConsulting: "Financial Consulting",
@@ -437,7 +440,10 @@ export const translations = {
     consulting: {
       title: "Consultoría",
       description: "Consultoría estratégica en finanzas y negocios para PYMES.",
+      servicesTitle: "Nuestros Servicios",
       readyToConsult: "¿Listo para consultar?",
+      consultCTA: "Hablemos sobre tus necesidades empresariales y cómo podemos ayudarte.",
+      requestConsultation: "Solicitar Consultoría",
       consultText: "Hablemos sobre tus necesidades empresariales y cómo podemos ayudarte.",
       quantitativeConsulting: "Consultoría Cuantitativa",
       financialConsulting: "Consultoría Financiera",
@@ -680,7 +686,10 @@ export const translations = {
     consulting: {
       title: "Conseil",
       description: "Conseil stratégique en finance et affaires pour les PME.",
+      servicesTitle: "Nos Services",
       readyToConsult: "Prêt à consulter?",
+      consultCTA: "Discutons de vos besoins commerciaux et comment nous pouvons vous aider.",
+      requestConsultation: "Demander une Consultation",
       consultText: "Discutons de vos besoins commerciaux et comment nous pouvons vous aider.",
       quantitativeConsulting: "Conseil Quantitatif",
       financialConsulting: "Conseil Financier",
