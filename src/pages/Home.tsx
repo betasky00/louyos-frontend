@@ -5,17 +5,16 @@ export default function Home() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-[#faf8f3]">
+    <div className="min-h-screen bg-[#faf8f3] relative">
+      {/* Logo - Top Left */}
+      <img 
+        src="https://d2xsxph8kpxj0f.cloudfront.net/310519663343272180/SKr95mWvk2iL2qiW74xYnp/ChatGPTImageMar26,2026at06_29_45PM_4c1602b7.png" 
+        alt="Louyos Logo" 
+        className="absolute top-[20px] left-[15px] w-72 h-72 md:w-96 md:h-96 object-contain z-10"
+      />
       {/* Hero Section */}
       <section className="pt-24 pb-20 md:pt-32 md:pb-28 bg-[#faf8f3]">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <div className="flex items-center justify-center gap-6 mb-8">
-            <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663343272180/SKr95mWvk2iL2qiW74xYnp/ChatGPTImageMar26,2026at06_29_45PM_4c1602b7.png" 
-              alt="Louyos Logo" 
-              className="w-24 h-24 md:w-32 md:h-32 object-contain"
-            />
-          </div>
           <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 text-gray-900 leading-tight">
             Louyos Academy <span className="ampersand">&</span> Consulting
           </h1>
