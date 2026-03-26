@@ -22,23 +22,28 @@ export default function Lycee() {
   const categories = [
     {
       id: "mathematics",
-      title: t("lycee.mathematics.title"),
-      subjects: t("lycee.mathematics.subjects"),
+      title: t("secondarySchool.mathematics.title"),
+      subjects: t("secondarySchool.mathematics.subjects"),
     },
     {
       id: "sciences",
-      title: t("lycee.sciences.title"),
-      subjects: t("lycee.sciences.subjects"),
+      title: t("secondarySchool.sciences.title"),
+      subjects: t("secondarySchool.sciences.subjects"),
     },
     {
       id: "languages",
-      title: t("lycee.languages.title"),
-      subjects: t("lycee.languages.subjects"),
+      title: t("secondarySchool.languages.title"),
+      subjects: t("secondarySchool.languages.subjects"),
     },
     {
       id: "humanities",
-      title: t("lycee.humanities.title"),
-      subjects: t("lycee.humanities.subjects"),
+      title: t("secondarySchool.humanities.title"),
+      subjects: t("secondarySchool.humanities.subjects"),
+    },
+    {
+      id: "concours",
+      title: t("secondarySchool.concours.title"),
+      subjects: t("secondarySchool.concours.subjects"),
     },
   ];
 
@@ -81,10 +86,10 @@ export default function Lycee() {
             Back to Academy
           </button>
           <h1 className="text-5xl md:text-6xl font-playfair font-bold mb-6 text-gray-900">
-            {t("lycee.title")}
+            {t("secondarySchool.title")}
           </h1>
           <p className="text-lg md:text-xl text-gray-700 font-light">
-            {t("lycee.description")}
+            {t("secondarySchool.description")}
           </p>
         </div>
       </section>
@@ -188,16 +193,21 @@ export default function Lycee() {
                   <label className="block text-sm font-semibold mb-2 text-gray-900">
                     {t("forms.subject")}
                   </label>
-                  <input
-                    type="text"
+                  <select
                     value={formData.subject}
                     onChange={(e) =>
                       setFormData({ ...formData, subject: e.target.value })
                     }
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all"
-                    placeholder="e.g., Mathematics, Physics, French"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all bg-white"
                     required
-                  />
+                  >
+                    <option value="">{t("forms.selectClass")}</option>
+                    {categories.map((category) =>
+                      Array.isArray(category.subjects) && category.subjects.map((subject: string, idx: number) => (
+                        <option key={`${category.id}-${idx}`} value={subject}>{subject}</option>
+                      ))
+                    )}
+                  </select>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">

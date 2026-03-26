@@ -1,6 +1,6 @@
 import { useLanguage } from "../contexts/LanguageContext";
 import { useState } from "react";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, MessageCircle } from "lucide-react";
 import { toast } from "sonner";
 
 export default function Contact() {
@@ -90,6 +90,24 @@ export default function Contact() {
                         consulting@louyos.com
                       </a>
                     </div>
+                  </div>
+                </div>
+
+                {/* WhatsApp */}
+                <div className="flex gap-6">
+                  <div className="p-3 bg-green-50 rounded-lg h-fit">
+                    <MessageCircle size={28} className="text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-2 text-gray-900">WhatsApp</h3>
+                    <a
+                      href="https://wa.me/34626351439"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-700 hover:text-green-600 transition-colors text-lg font-light"
+                    >
+                      {t("footer.whatsapp")}
+                    </a>
                   </div>
                 </div>
 

@@ -14,7 +14,7 @@ All materials, content, and services provided by Louyos are protected by intelle
 
 As a provider of educational and consulting services, Louyos Academy & Consulting operates under Spanish law and maintains all necessary legal protections for both our business operations and client relationships. We are committed to providing high-quality services in compliance with all applicable regulations.
 
-For any legal inquiries or concerns, please contact us at louyos_academy@louyos.com.`,
+For any legal inquiries or concerns, please contact us at academy@louyos.com or consulting@louyos.com.`,
     },
     cookies: {
       title: t("footer.cookiePolicy"),
@@ -46,12 +46,12 @@ How We Use Your Data:
 - To comply with legal obligations
 
 Your Rights:
-You have the right to access, correct, or delete your personal data. You may also request data portability or object to certain processing activities. To exercise these rights, please contact us at louyos_academy@louyos.com.
+You have the right to access, correct, or delete your personal data. You may also request data portability or object to certain processing activities. To exercise these rights, please contact us at academy@louyos.com or consulting@louyos.com.
 
 Data Security:
 We employ industry-standard encryption and security protocols to protect your information. All staff members are trained in data protection best practices.
 
-For any data protection inquiries or concerns, please contact our data protection team at louyos_academy@louyos.com.`,
+For any data protection inquiries or concerns, please contact our data protection team at academy@louyos.com or consulting@louyos.com.`,
     },
   };
 
@@ -79,6 +79,11 @@ For any data protection inquiries or concerns, please contact our data protectio
               </p>
               <p className="text-gray-400 mb-6 font-light">
                 {t("footer.country")}
+              </p>
+              <p className="text-gray-400 mb-2">
+                <a href="https://wa.me/34626351439" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors font-light">
+                  {t("footer.whatsapp")}
+                </a>
               </p>
               <p className="text-gray-400 mb-2">
                 <a href="tel:+34626351439" className="hover:text-green-400 transition-colors font-light">

@@ -187,16 +187,22 @@ export default function IEUniversity() {
                   <label className="block text-sm font-semibold mb-2 text-gray-900">
                     {t("forms.subject")}
                   </label>
-                  <input
-                    type="text"
+                  <select
                     value={formData.subject}
                     onChange={(e) =>
                       setFormData({ ...formData, subject: e.target.value })
                     }
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all"
-                    placeholder="e.g., Statistics, Econometrics"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-all bg-white"
                     required
-                  />
+                  >
+                    <option value="">{t("forms.selectClass")}</option>
+                    {activeTab === "bba" && Array.isArray(bbaClasses) && bbaClasses.map((cls: string, idx: number) => (
+                      <option key={idx} value={cls}>{cls}</option>
+                    ))}
+                    {activeTab === "master" && Array.isArray(masterClasses) && masterClasses.map((cls: string, idx: number) => (
+                      <option key={idx} value={cls}>{cls}</option>
+                    ))}
+                  </select>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">

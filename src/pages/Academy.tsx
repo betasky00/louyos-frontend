@@ -23,18 +23,12 @@ export default function Academy() {
     },
     {
       id: "lycee",
-      label: t("academy.lycee"),
-      description: t("academy.lyceeDescription"),
+      label: t("academy.secondarySchool"),
+      description: t("academy.secondarySchoolDescription"),
       path: "/academy/lycee",
       color: "from-green-400 to-green-600",
     },
-    {
-      id: "primaire",
-      label: t("academy.primaire"),
-      description: t("academy.primaireDescription"),
-      path: "/academy/primaire",
-      color: "from-green-400 to-green-600",
-    },
+
   ];
 
   return (

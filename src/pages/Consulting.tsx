@@ -58,7 +58,7 @@ export default function Consulting() {
       {/* Services */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-playfair font-bold mb-12 text-gray-900">Our Services</h2>
+          <h2 className="text-4xl font-playfair font-bold mb-12 text-gray-900">{t("consulting.servicesTitle")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {Array.isArray(services) ? (services as string[]).map((service: string, index: number) => (
               <div key={index} className="flex gap-4 p-6 border border-gray-100 rounded-xl hover:shadow-md transition-all duration-300 bg-white">
@@ -79,15 +79,15 @@ export default function Consulting() {
         <div className="max-w-2xl mx-auto px-4">
           {!showForm ? (
             <div className="text-center">
-              <h2 className="text-4xl font-playfair font-bold mb-6 text-gray-900">Ready to Consult?</h2>
+              <h2 className="text-4xl font-playfair font-bold mb-6 text-gray-900">{t("consulting.readyToConsult")}</h2>
               <p className="text-lg text-gray-700 mb-10 font-light">
-                Let's discuss your business needs and how we can help.
+                {t("consulting.consultCTA")}
               </p>
               <button
                 onClick={() => setShowForm(true)}
                 className="bg-green-600 hover:bg-green-700 text-white px-10 py-3 rounded-lg font-semibold transition-all duration-300 shadow-sm hover:shadow-md"
               >
-                Request a Consultation
+                {t("consulting.requestConsultation")}
               </button>
             </div>
           ) : (
