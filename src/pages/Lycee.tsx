@@ -48,7 +48,11 @@ export default function Lycee() {
   ];
 
   const sendEmail = async (data: typeof formData) => {
-    await sendBookingEmail('academy', data);
+    await sendBookingEmail('academy', {
+      ...data,
+      educationLevel: 'Secondary School',
+      course: data.subject,
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -62,6 +66,7 @@ export default function Lycee() {
     submissions.push({
       type: "session",
       ...formData,
+      educationLevel: 'Secondary School',
       timestamp: new Date().toISOString(),
     });
     localStorage.setItem("submissions", JSON.stringify(submissions));

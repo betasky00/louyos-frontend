@@ -60,7 +60,11 @@ export default function GeneralUniversity() {
   ];
 
   const sendEmail = async (data: typeof formData) => {
-    await sendBookingEmail('academy', data);
+    await sendBookingEmail('academy', {
+      ...data,
+      educationLevel: 'Other Universities',
+      course: data.subject,
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -74,6 +78,7 @@ export default function GeneralUniversity() {
     submissions.push({
       type: "session",
       ...formData,
+      educationLevel: 'Other Universities',
       timestamp: new Date().toISOString(),
     });
     localStorage.setItem("submissions", JSON.stringify(submissions));

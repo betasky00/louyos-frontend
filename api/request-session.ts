@@ -13,7 +13,7 @@ export default async function handler(
   }
 
   try {
-    const { name, email, date, time, notes, type } = req.body;
+    const { name, email, date, time, notes, type, educationLevel, course } = req.body;
 
     // Validate all fields
     if (!name || !email || !date || !time) {
@@ -47,6 +47,8 @@ New ${type === 'consulting' ? 'Consulting' : 'Session'} Request
 
 Name: ${name}
 Email: ${email}
+${educationLevel ? `Education Level: ${educationLevel}` : ''}
+${course ? `Course/Service: ${course}` : ''}
 Date: ${date}
 Time: ${time}
 ${notes ? `Notes: ${notes}` : ''}
@@ -64,6 +66,8 @@ Thank you for your ${type === 'consulting' ? 'consulting request' : 'session req
 We have received your request and will get back to you as soon as possible.
 
 Request Details:
+${educationLevel ? `- Education Level: ${educationLevel}` : ''}
+${course ? `- Course/Service: ${course}` : ''}
 - Date: ${date}
 - Time: ${time}
 ${notes ? `- Notes: ${notes}` : ''}

@@ -154,17 +154,15 @@ export const translations = {
         subjects: [
           "Physics",
           "Chemistry",
-          "Biology",
-          "Earth Sciences",
         ],
       },
       languages: {
         title: "Languages",
         subjects: [
-          "French Language & Literature",
+          "French",
           "English",
           "Spanish",
-          "German",
+          "Italian",
         ],
       },
       humanities: {
@@ -404,17 +402,15 @@ export const translations = {
         subjects: [
           "Física",
           "Química",
-          "Biología",
-          "Ciencias de la Tierra",
         ],
       },
       languages: {
-        title: "Lenguas",
+        title: "Idiomas",
         subjects: [
-          "Lengua y Literatura Francesa",
+          "Francés",
           "Inglés",
           "Español",
-          "Alemán",
+          "Italiano",
         ],
       },
       humanities: {
@@ -650,17 +646,15 @@ export const translations = {
         subjects: [
           "Physique",
           "Chimie",
-          "Biologie",
-          "Sciences de la Terre",
         ],
       },
       languages: {
         title: "Langues",
         subjects: [
-          "Français et Littérature",
+          "Français",
           "Anglais",
           "Espagnol",
-          "Allemand",
+          "Italien",
         ],
       },
       humanities: {

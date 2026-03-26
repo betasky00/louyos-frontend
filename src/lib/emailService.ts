@@ -10,6 +10,8 @@ interface BookingData {
   date?: string;
   time?: string;
   message?: string;
+  educationLevel?: string;
+  course?: string;
 }
 
 export const sendBookingEmail = async (
@@ -30,6 +32,8 @@ export const sendBookingEmail = async (
         time: data.time || new Date().toLocaleTimeString(),
         notes: data.message || data.subject || '',
         type: type,
+        educationLevel: data.educationLevel || '',
+        course: data.course || '',
       }),
     });
 

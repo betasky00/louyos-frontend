@@ -23,7 +23,11 @@ export default function IEUniversity() {
   const masterClasses = t("ieUniversity.masterClasses") as string[];
 
   const sendEmail = async (data: typeof formData) => {
-    await sendBookingEmail('academy', data);
+    await sendBookingEmail('academy', {
+      ...data,
+      educationLevel: 'IE University',
+      course: data.subject,
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -37,6 +41,7 @@ export default function IEUniversity() {
     submissions.push({
       type: "session",
       ...formData,
+      educationLevel: 'IE University',
       timestamp: new Date().toISOString(),
     });
     localStorage.setItem("submissions", JSON.stringify(submissions));
