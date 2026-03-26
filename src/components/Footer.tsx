@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function Footer() {
   const { t } = useLanguage();
-  const [showLegalModal, setShowLegalModal] = useState<"notice" | "cookies" | "data" | null>(null);
+  const [showLegalModal, setShowLegalModal] = useState<"notice" | "cookies" | "data" | "company" | null>(null);
 
   const legalContent = {
     notice: {
@@ -52,6 +52,18 @@ Data Security:
 We employ industry-standard encryption and security protocols to protect your information. All staff members are trained in data protection best practices.
 
 For any data protection inquiries or concerns, please contact our data protection team at academy@louyos.com or consulting@louyos.com.`,
+    },
+    company: {
+      title: t("footer.companyInfo"),
+      content: `Company Information
+
+Company Name: Distribuciones y Servicios Louyos S.L.
+
+${t("footer.companyNumber")}
+
+${t("footer.companyAddress")}
+
+This is the official registered address of Louyos Academy & Consulting for all legal and administrative purposes.`,
     },
   };
 
@@ -155,6 +167,14 @@ For any data protection inquiries or concerns, please contact our data protectio
                     className="hover:text-green-400 transition-colors font-light text-left"
                   >
                     {t("footer.dataProtection")}
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => setShowLegalModal("company")}
+                    className="hover:text-green-400 transition-colors font-light text-left"
+                  >
+                    {t("footer.companyInfo")}
                   </button>
                 </li>
               </ul>

@@ -1,5 +1,5 @@
 import { useLanguage } from "../contexts/LanguageContext";
-import { BookOpen, Briefcase, Check, ArrowRight } from "lucide-react";
+import { BookOpen, Briefcase, Check, ArrowRight, MessageCircle } from "lucide-react";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -9,6 +9,13 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-24 pb-20 md:pt-32 md:pb-28 bg-[#faf8f3]">
         <div className="max-w-6xl mx-auto px-4 text-center">
+          <div className="flex items-center justify-center gap-6 mb-8">
+            <img 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663343272180/SKr95mWvk2iL2qiW74xYnp/ChatGPTImageMar26,2026at06_29_45PM_4c1602b7.png" 
+              alt="Louyos Logo" 
+              className="w-24 h-24 md:w-32 md:h-32 object-contain"
+            />
+          </div>
           <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 text-gray-900 leading-tight">
             Louyos Academy <span className="ampersand">&</span> Consulting
           </h1>
@@ -38,7 +45,7 @@ export default function Home() {
       <section className="py-12 bg-white border-y border-gray-100">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <p className="text-sm md:text-base text-gray-600 font-light">
-            Students from IE, ICADE, CUNEF, Carlos III, King's College, London School of Economics, Lancaster, NEOMA...
+            {t("home.credibilityLabel")}
           </p>
         </div>
       </section>
@@ -99,9 +106,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-lg"
           >
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.869 1.271c-.402.23-.779.561-1.114.947a9.9 9.9 0 00-1.5 3.694c-.243.882-.29 1.85-.135 2.76.074.464.19.916.35 1.345a9.888 9.888 0 001.271 2.855c.401.534.878 1.022 1.42 1.428.542.407 1.158.748 1.835.998.677.25 1.423.422 2.198.498.775.076 1.577-.007 2.35-.244.773-.237 1.508-.625 2.18-1.147a9.889 9.889 0 002.254-2.671c.55-.906.93-1.905 1.118-2.948.188-1.043.15-2.126-.11-3.158a9.9 9.9 0 00-.75-2.573 9.87 9.87 0 00-1.5-2.215 9.87 9.87 0 00-2.215-1.5 9.87 9.87 0 00-2.573-.75c-1.032-.26-2.115-.298-3.158-.11m0-2.082C6.727 2.97 1 8.695 1 12c0 3.305 5.727 9.03 11.051 9.03 5.324 0 11.051-5.725 11.051-9.03 0-3.305-5.727-9.03-11.051-9.03z"/>
-            </svg>
+            <MessageCircle size={24} />
             Chat on WhatsApp
           </a>
         </div>
