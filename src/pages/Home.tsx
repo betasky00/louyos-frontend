@@ -5,23 +5,25 @@ export default function Home() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-[#faf8f3] relative">
-      {/* Logo - Top Left */}
-      <img 
-        src="https://d2xsxph8kpxj0f.cloudfront.net/310519663343272180/SKr95mWvk2iL2qiW74xYnp/ChatGPTImageMar26,2026at06_29_45PM_4c1602b7.png" 
-        alt="Louyos Logo" 
-        className="absolute top-[20px] left-[15px] w-72 h-72 md:w-96 md:h-96 object-contain z-10"
-      />
+    <div className="min-h-screen bg-[#faf8f3]">
       {/* Hero Section */}
-      <section className="pt-24 pb-20 md:pt-32 md:pb-28 bg-[#faf8f3]">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 text-gray-900 leading-tight">
-            Louyos Academy <span className="ampersand">&</span> Consulting
-          </h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-12 font-light max-w-3xl mx-auto">
-            {t("home.heroSubheadline")}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <section className="pb-20 md:pb-28 bg-[#faf8f3]">
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Logo - Top Left */}
+          <img 
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663343272180/SKr95mWvk2iL2qiW74xYnp/ChatGPTImageMar26,2026at06_29_45PM_4c1602b7.png" 
+            alt="Louyos Logo" 
+            className="w-56 h-56 md:w-72 md:h-72 object-contain mb-12"
+          />
+          {/* Title Section */}
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 text-gray-900 leading-tight">
+              Louyos Academy <span className="ampersand">&</span> Consulting
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 mb-12 font-light max-w-3xl mx-auto">
+              {t("home.heroSubheadline")}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/academy" 
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 shadow-sm hover:shadow-md"
@@ -36,6 +38,7 @@ export default function Home() {
               {t("home.exploreCTA2")}
               <ArrowRight size={18} />
             </a>
+            </div>
           </div>
         </div>
       </section>
