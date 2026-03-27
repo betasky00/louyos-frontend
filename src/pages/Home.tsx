@@ -9,14 +9,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pb-20 md:pb-28 bg-[#faf8f3]">
         <div className="max-w-6xl mx-auto px-4">
-          {/* Logo - Top Left */}
-          <img 
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663343272180/SKr95mWvk2iL2qiW74xYnp/ChatGPTImageMar26,2026at06_29_45PM_4c1602b7.png" 
-            alt="Louyos Logo" 
-            className="w-56 h-56 md:w-72 md:h-72 object-contain mb-12"
-          />
-          {/* Title Section */}
-          <div className="text-center">
+          <div className="flex flex-col md:flex-row md:items-start md:gap-12">
+            {/* Logo - Left on desktop, centered on mobile */}
+            <img 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663343272180/SKr95mWvk2iL2qiW74xYnp/ChatGPTImageMar26,2026at06_29_45PM_4c1602b7.png" 
+              alt="Louyos Logo" 
+              className="w-56 h-56 md:w-72 md:h-72 object-contain mb-4 md:mb-0 mx-auto md:mx-0 flex-shrink-0"
+            />
+            {/* Title Section */}
+            <div className="text-center md:text-left flex-1">
             <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 text-gray-900 leading-tight">
               Louyos Academy <span className="ampersand">&</span> Consulting
             </h1>
@@ -39,6 +40,7 @@ export default function Home() {
               <ArrowRight size={18} />
             </a>
             </div>
+          </div>
           </div>
         </div>
       </section>
