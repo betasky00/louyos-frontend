@@ -105,6 +105,35 @@ export default function Consulting() {
         </div>
       </section>
 
+      {/* References and Completed Works */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-center mb-16 text-gray-900">
+            {t("consulting.referencesTitle")}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-[#faf8f3] p-8 rounded-xl">
+              <h3 className="text-2xl font-playfair font-bold mb-4 text-gray-900">{t("consulting.referencesCompanies")}</h3>
+              <p className="text-gray-700 font-light leading-relaxed">
+                {t("consulting.referencesCompaniesDesc")}
+              </p>
+            </div>
+            <div className="bg-[#faf8f3] p-8 rounded-xl">
+              <h3 className="text-2xl font-playfair font-bold mb-4 text-gray-900">{t("consulting.referencesProjects")}</h3>
+              <p className="text-gray-700 font-light leading-relaxed">
+                {t("consulting.referencesProjectsDesc")}
+              </p>
+            </div>
+            <div className="bg-[#faf8f3] p-8 rounded-xl">
+              <h3 className="text-2xl font-playfair font-bold mb-4 text-gray-900">{t("consulting.referencesResults")}</h3>
+              <p className="text-gray-700 font-light leading-relaxed">
+                {t("consulting.referencesResultsDesc")}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Consulting Request Form */}
       <section className="py-20 md:py-28 bg-[#faf8f3]">
         <div className="max-w-2xl mx-auto px-4">
