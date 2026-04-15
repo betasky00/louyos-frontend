@@ -10,8 +10,8 @@ export const translations = {
     // Home Page
     home: {
       heroTitle: "Louyos Academy & Consulting",
-      heroSubheadline: "We offer private tutoring and personalized academic support for students from IE University and other top universities, along with financial consulting and quantitative analysis services aimed at SMEs.",
-      credibilityLabel: "Classes for IE University, ESCP and other top universities. Students from IE, ICADE, CUNEF, Carlos III, King's College, London School of Economics, Lancaster, NEOMA...",
+      heroSubheadline: "We offer private tutoring and personalized academic support for students from IE University, ESCP and other top universities, along with financial consulting and quantitative analysis services aimed at SMEs.",
+      credibilityLabel: "Students from IE, ESCP, ICADE, CUNEF, Carlos III, King's College, London School of Economics, Lancaster, NEOMA...",
       exploreCTA1: "Explore Academy",
       exploreCTA2: "Explore Consulting",
       academyTitle: "Academy",
@@ -281,8 +281,8 @@ export const translations = {
     },
     home: {
       heroTitle: "Louyos Academia & Consultoría",
-      heroSubheadline: "Ofrecemos tutoría privada y apoyo académico personalizado para estudiantes de IE University y otras universidades de alto nivel, junto con servicios de consultoría financiera y análisis cuantitativo orientados a PYMES.",
-      credibilityLabel: "Clases para IE University, ESCP y otras universidades de alto nivel. Estudiantes de IE, ICADE, CUNEF, Carlos III, King's College, London School of Economics, Lancaster, NEOMA...",
+      heroSubheadline: "Ofrecemos tutoría privada y apoyo académico personalizado para estudiantes de IE University, ESCP y otras universidades de alto nivel, junto con servicios de consultoría financiera y análisis cuantitativo orientados a PYMES.",
+      credibilityLabel: "Estudiantes de IE, ESCP, ICADE, CUNEF, Carlos III, King's College, London School of Economics, Lancaster, NEOMA...",
       exploreCTA1: "Explorar Academia",
       exploreCTA2: "Explorar Consultoría",
       academyTitle: "Academia",
@@ -544,8 +544,8 @@ export const translations = {
     },
     home: {
       heroTitle: "Louyos Académie & Conseil",
-      heroSubheadline: "Nous offrons un tutorat privé et un soutien académique personnalisé pour les étudiants d'IE University et d'autres universités de haut niveau, ainsi que des services de conseil financier et d'analyse quantitative destinés aux PME.",
-      credibilityLabel: "Cours pour IE University, ESCP et autres universités de haut niveau. Étudiants de IE, ICADE, CUNEF, Carlos III, King's College, London School of Economics, Lancaster, NEOMA...",
+      heroSubheadline: "Nous offrons un tutorat privé et un soutien académique personnalisé pour les étudiants d'IE University, ESCP et d'autres universités de haut niveau, ainsi que des services de conseil financier et d'analyse quantitative destinés aux PME.",
+      credibilityLabel: "Étudiants de IE, ESCP, ICADE, CUNEF, Carlos III, King's College, London School of Economics, Lancaster, NEOMA...",
       exploreCTA1: "Explorer l'Académie",
       exploreCTA2: "Explorer le Conseil",
       academyTitle: "Académie",
